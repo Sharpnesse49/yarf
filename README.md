@@ -9,8 +9,8 @@ user	0m0,001s
 sys	0m0,001s
 
 **How To Install :**
-`git clone https://github.com/Sharpnesse49/yarf && cd yarf && cargo build --release && cd`
+`git clone https://github.com/Sharpnesse49/yarf && cd yarf && cargo build && cd`
 **Usage :**
-`./yarf/target/release/yet-another-rust-fetcher`
+`./yarf/target/debug/yet-another-rust-fetcher`
 
 Made with ♥ by Sharpnesse
