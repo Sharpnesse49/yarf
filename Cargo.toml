@@ -1,6 +1,7 @@
 [package]
 name = "yet-another-rust-fetcher"
 version = "0.1.0"
+edition = "2021"
 
 [dependencies]
 
