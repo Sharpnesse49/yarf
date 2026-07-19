@@ -98,7 +98,6 @@ fn get_gpu() -> String {
         return get_gpu_lspci();
     }
 
-    // Try looking up in pci.ids first
     for database_path in &["/usr/share/hwdata/pci.ids", "/usr/share/misc/pci.ids"] {
         if let Ok(file) = File::open(database_path) {
             let reader = BufReader::new(file);
@@ -126,7 +125,7 @@ fn get_gpu() -> String {
                     }
                 } else {
                     if in_vendor {
-                        break; // Left our vendor section, stop scanning
+                        break;
                     }
                     if let Some(pos) = line.find(' ') {
                         let (v_id, v_name) = line.split_at(pos);
@@ -176,7 +175,11 @@ fn get_ram() -> String {
 }
 
 fn main() {
-    let blue = "\x1b[34m";
+  let color = "\x1b[31m"; //red
+  //let color = "\x1b[32m"; //green
+  //let color = "\x1b[33m"; //yellow
+  //let color = "\x1b[34m"; //blue
+  //let color = "\x1b[35m"; //purple
     let reset = "\x1b[0m";
 
     let os = get_os();
@@ -198,11 +201,11 @@ fn main() {
         "\\___)=(___/     ",
     ];
 
-    let _ = writeln!(handle, "{}{}{}", blue, tux_lines[0], reset);
-    let _ = writeln!(handle, "{}{}{}", blue, tux_lines[1], reset);
-    let _ = writeln!(handle, "{}{}os   :{} {}", blue, tux_lines[2], reset, os);
-    let _ = writeln!(handle, "{}{}krnl :{} {}", blue, tux_lines[3], reset, krnl);
-    let _ = writeln!(handle, "{}{}cpu  :{} {}", blue, tux_lines[4], reset, cpu);
-    let _ = writeln!(handle, "{}{}gpu  :{} {}", blue, tux_lines[5], reset, gpu);
-    let _ = writeln!(handle, "{}{}ram  :{} {}", blue, tux_lines[6], reset, ram);
+    let _ = writeln!(handle, "{}{}{}", color, tux_lines[0], reset);
+    let _ = writeln!(handle, "{}{}{}", color, tux_lines[1], reset);
+    let _ = writeln!(handle, "{}{}os   :{} {}", color, tux_lines[2], reset, os);
+    let _ = writeln!(handle, "{}{}krnl :{} {}", color, tux_lines[3], reset, krnl);
+    let _ = writeln!(handle, "{}{}cpu   :{} {}", color, tux_lines[4], reset, cpu);
+    let _ = writeln!(handle, "{}{}gpu   :{} {}", color, tux_lines[5], reset, gpu);
+    let _ = writeln!(handle, "{}{}ram   :{} {}", color, tux_lines[6], reset, ram);
 }
