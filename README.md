@@ -1,7 +1,8 @@
 ## Yarf (Yet Another Rust Fetcher)
 *Another rust fetcher made to be fast &amp; light (~0m0,003s)*
 
-<img width="562" height="727" alt="image" src="https://github.com/user-attachments/assets/f1386874-7f15-44e3-8a86-03b7936f61ee" />
+<img width="560" height="725" alt="Capture d’écran du 2026-07-19 07-24-48" src="https://github.com/user-attachments/assets/6d23eef9-5e60-46ff-bb6d-a13cab04f870" />
+
 
 
 Basic Benchmark :
