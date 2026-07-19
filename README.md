@@ -14,5 +14,9 @@ sys	0m0,001s
 `git clone https://github.com/Sharpnesse49/yarf && cd yarf && cargo build && cd`
 ### Usage :
 `./yarf/target/debug/yet-another-rust-fetcher`
+### How To Change The Color :
+*At the end of main.rs you can see all the available color, just uncomment the color you want AND comment the other line.*
+<img width="353" height="182" alt="image" src="https://github.com/user-attachments/assets/8503a6fb-c7ba-44e6-b618-707ec6c88c86" />
+
 
 Made with ♥ by Sharpnesse
