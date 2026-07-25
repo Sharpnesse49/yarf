@@ -26,7 +26,7 @@ fn get_os() -> String {
 }
 
 fn get_kernel() -> String {
-    read_first_line("/proc/sys/kernel/osrelease").unwrap_or_else(|| "Inconnu".to_string())
+    read_first_line("/proc/sys/kernel/osrelease").unwrap_or_else(|| "...".to_string())
 }
 
 fn get_cpu() -> String {
@@ -43,7 +43,7 @@ fn get_cpu() -> String {
             }
             None
         })
-        .unwrap_or_else(|| "Inconnu".to_string())
+        .unwrap_or_else(|| "...".to_string())
 }
 
 fn get_gpu_lspci() -> String {
@@ -66,7 +66,7 @@ fn get_gpu_lspci() -> String {
                         .to_string()
                 })
         })
-        .unwrap_or_else(|| "Inconnu".to_string())
+        .unwrap_or_else(|| "...".to_string())
 }
 
 fn get_gpu() -> String {
